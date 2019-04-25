@@ -1,6 +1,6 @@
 {
   "name": "cypress-plugin-signalr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Verify and publish actions from and to your SignalR hubs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
