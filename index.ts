@@ -5,4 +5,4 @@ Cypress.Commands.add('hubPublish', publish);
 Cypress.Commands.add('hubVerify', verify);
 Cypress.Commands.add('hubClear', clear);
 
-global.signalrMock = new SignalRMock();
+(<any>global).signalrMock = new SignalRMock();

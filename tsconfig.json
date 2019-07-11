@@ -8,7 +8,10 @@
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "types": ["cypress"]
+    "types": [
+      "node",
+      "cypress"
+    ]
   },
   "exclude": [
     "node_modules"
