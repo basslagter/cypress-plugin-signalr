@@ -1,4 +1,4 @@
 export interface IClearProps {
-    invokes: boolean;
-    subscribers: boolean;
+    invokes?: boolean;
+    subscribers?: boolean;
 }

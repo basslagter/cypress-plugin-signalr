@@ -19,7 +19,7 @@ export function verify(action: string, times: number = 1, callback?: (invokes: I
   }
 }
 
-export function clear(props: IClearProps) {
+export function clear(props: IClearProps = {}) {
   const {
     subscribers = true,
     invokes = true,

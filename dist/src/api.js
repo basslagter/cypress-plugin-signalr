@@ -22,6 +22,7 @@ function verify(action, times, callback) {
 }
 exports.verify = verify;
 function clear(props) {
+    if (props === void 0) { props = {}; }
     var _a = props.subscribers, subscribers = _a === void 0 ? true : _a, _b = props.invokes, invokes = _b === void 0 ? true : _b;
     if (subscribers) {
         subscribers_1.clearSubscribers();
