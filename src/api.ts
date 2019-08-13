@@ -1,6 +1,7 @@
 import { clearInvokes, invokes } from './invokes';
-import { subscribers } from './subscribers';
+import { clearSubscribers, subscribers } from './subscribers';
 import IInvoke from './contracts/IInvoke';
+import { IClearProps } from './contracts/IClearProps';
 
 export function publish(action: string, ...args: any) {
   subscribers
@@ -18,6 +19,17 @@ export function verify(action: string, times: number = 1, callback?: (invokes: I
   }
 }
 
-export function clear() {
-  clearInvokes();
+export function clear(props: IClearProps) {
+  const {
+    subscribers = true,
+    invokes = true,
+  } = props;
+
+  if (subscribers) {
+    clearSubscribers();
+  }
+
+  if (invokes) {
+    clearInvokes();
+  }
 }

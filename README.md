@@ -117,3 +117,15 @@ You can call this command after each test, like:
         .hubClear();
   });
 ```
+
+Optionally you can specify whether you want to clear both the invokes as the subscribers, like:
+
+```javascript
+  afterEach(() => {
+      cy
+        .hubClear({
+            subscribers: false,
+            invokes: true, // default
+         });
+  });
+```

@@ -1,3 +1,7 @@
 import ISubscriber from './contracts/ISubscriber';
 
-export const subscribers: ISubscriber[] = [];
+export let subscribers: ISubscriber[] = [];
+
+export function clearSubscribers() {
+  subscribers = [];
+}
