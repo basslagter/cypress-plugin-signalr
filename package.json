@@ -1,6 +1,6 @@
 {
   "name": "cypress-plugin-signalr",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Verify and publish actions from and to your SignalR hubs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,9 +30,9 @@
   "homepage": "https://github.com/basslagter/cypress-plugin-signalr#readme",
   "devDependencies": {
     "@types/cypress": "^1.1.3",
-    "@types/node": "^12.6.2",
-    "standard-version": "^6.0.1",
-    "typescript": "^3.5.3",
-    "lodash": "^4.17.14"
+    "@types/node": "^12.12.17",
+    "standard-version": "^7.0.1",
+    "typescript": "^3.7.3",
+    "lodash": "^4.17.15"
   }
 }
