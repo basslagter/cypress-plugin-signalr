@@ -21,8 +21,31 @@ var SignalRMock = /** @class */ (function () {
             args: args,
         });
     };
-    SignalRMock.prototype.onclose = function () {
+    SignalRMock.prototype.off = function (action, callback) {
+        if (callback) {
+            subscribers_1.removeSubscriberByCallback(callback);
+        }
+        else {
+            subscribers_1.removeSubscriberByAction(action);
+        }
+    };
+    SignalRMock.prototype.onclose = function (callback) {
         return;
+    };
+    SignalRMock.prototype.start = function () {
+        return Promise.resolve();
+    };
+    SignalRMock.prototype.stop = function () {
+        return Promise.resolve();
+    };
+    SignalRMock.prototype.onreconnecting = function (callback) {
+        return;
+    };
+    SignalRMock.prototype.onreconnected = function (callback) {
+        return;
+    };
+    SignalRMock.prototype.send = function (methodName, args) {
+        return Promise.resolve();
     };
     return SignalRMock;
 }());
