@@ -1,19 +1,13 @@
-import { subscribers, removeSubscriberByAction, removeSubscriberByCallback } from './subscribers';
-import { invokes } from './invokes';
+import { addSubscriber, removeSubscriberByAction, removeSubscriberByCallback } from './subscribers';
+import { addInvoke } from './invokes';
 
 export class SignalRMock {
   on(action: string, callback: (...args: any) => void): void {
-    subscribers.push({
-      action,
-      callback,
-    });
+    addSubscriber({ action, callback })
   }
 
   invoke(action: string, ...args: any): void {
-    invokes.push({
-      action,
-      args,
-    });
+    addInvoke({ action, args })
   }
 
   off(action: string, callback?: (args: any[]) => void): void {

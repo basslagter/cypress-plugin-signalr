@@ -6,20 +6,14 @@ var SignalRMock = /** @class */ (function () {
     function SignalRMock() {
     }
     SignalRMock.prototype.on = function (action, callback) {
-        subscribers_1.subscribers.push({
-            action: action,
-            callback: callback,
-        });
+        subscribers_1.addSubscriber({ action: action, callback: callback });
     };
     SignalRMock.prototype.invoke = function (action) {
         var args = [];
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
         }
-        invokes_1.invokes.push({
-            action: action,
-            args: args,
-        });
+        invokes_1.addInvoke({ action: action, args: args });
     };
     SignalRMock.prototype.off = function (action, callback) {
         if (callback) {

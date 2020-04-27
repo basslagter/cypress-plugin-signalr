@@ -1,15 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.subscribers = [];
+var subscribers = [];
+function getSubscribers() {
+    return subscribers;
+}
+exports.getSubscribers = getSubscribers;
+function addSubscriber(subscriber) {
+    subscribers.push(subscriber);
+}
+exports.addSubscriber = addSubscriber;
 function clearSubscribers() {
-    exports.subscribers = [];
+    subscribers = [];
 }
 exports.clearSubscribers = clearSubscribers;
 function removeSubscriberByAction(action) {
-    exports.subscribers = exports.subscribers.filter(function (subscriber) { return subscriber.action !== action; });
+    subscribers = subscribers.filter(function (subscriber) { return subscriber.action !== action; });
 }
 exports.removeSubscriberByAction = removeSubscriberByAction;
 function removeSubscriberByCallback(callback) {
-    exports.subscribers = exports.subscribers.filter(function (subscriber) { return subscriber.callback !== callback; });
+    subscribers = subscribers.filter(function (subscriber) { return subscriber.callback !== callback; });
 }
 exports.removeSubscriberByCallback = removeSubscriberByCallback;

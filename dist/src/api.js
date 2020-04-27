@@ -7,14 +7,14 @@ function publish(action) {
     for (var _i = 1; _i < arguments.length; _i++) {
         args[_i - 1] = arguments[_i];
     }
-    subscribers_1.subscribers
+    subscribers_1.getSubscribers()
         .filter(function (s) { return s.action === action; })
         .forEach(function (s) { return s.callback.apply(s, args); });
 }
 exports.publish = publish;
 function verify(action, times, callback) {
     if (times === void 0) { times = 1; }
-    var currentInvokes = invokes_1.invokes.filter(function (s) { return s.action === action; });
+    var currentInvokes = invokes_1.getInvokes().filter(function (s) { return s.action === action; });
     expect(currentInvokes.length).to.equal(times, action + " not invoked");
     if (callback) {
         callback(currentInvokes);
