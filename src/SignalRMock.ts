@@ -2,21 +2,21 @@ import { subscribers, removeSubscriberByAction, removeSubscriberByCallback } fro
 import { invokes } from './invokes';
 
 export class SignalRMock {
-  on(action: string, callback: (...args: any) => void) {
+  on(action: string, callback: (...args: any) => void): void {
     subscribers.push({
       action,
       callback,
     });
   }
 
-  invoke(action: string, ...args: any) {
+  invoke(action: string, ...args: any): void {
     invokes.push({
       action,
       args,
     });
   }
 
-  off(action: string, callback?: (args: any[]) => void) {
+  off(action: string, callback?: (args: any[]) => void): void {
     if (callback) {
       removeSubscriberByCallback(callback)
     } else {
@@ -24,27 +24,27 @@ export class SignalRMock {
     }
   }
 
-  onclose(callback?: (error?: Error) => void) {
+  onclose(callback?: (error?: Error) => void): void {
     return;
   }
 
-  start() {
+  start(): Promise<void> {
     return Promise.resolve();
   }
 
-  stop() {
+  stop(): Promise<void> {
     return Promise.resolve();
   }
 
-  onreconnecting(callback?: (error?: Error) => void) {
+  onreconnecting(callback?: (error?: Error) => void): void {
     return;
   }
 
-  onreconnected(callback?: (connectionId?: string) => void) {
+  onreconnected(callback?: (connectionId?: string) => void): void {
     return;
   }
 
-  send(methodName: string, args: any[]) {
+  send(methodName: string, args: any[]): Promise<void> {
     return Promise.resolve();
   }
 }
