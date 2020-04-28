@@ -3,11 +3,11 @@ import ISubscriber from './contracts/ISubscriber';
 let subscribers: ISubscriber[] = [];
 
 export function getSubscribers(): ISubscriber[] {
-  return subscribers
+  return subscribers;
 }
 
 export function addSubscriber(subscriber: ISubscriber): void {
-  subscribers.push(subscriber)
+  subscribers.push(subscriber);
 }
 
 export function clearSubscribers(): void {
@@ -19,5 +19,5 @@ export function removeSubscriberByAction(action: string): void {
 }
 
 export function removeSubscriberByCallback(callback: (args: any[]) => void): void {
-  subscribers = subscribers.filter(subscriber => subscriber.callback !== callback)
+  subscribers = subscribers.filter(subscriber => subscriber.callback !== callback);
 }

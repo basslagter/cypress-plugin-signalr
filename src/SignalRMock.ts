@@ -3,16 +3,16 @@ import { addInvoke } from './invokes';
 
 export class SignalRMock {
   on(action: string, callback: (...args: any) => void): void {
-    addSubscriber({ action, callback })
+    addSubscriber({ action, callback });
   }
 
   invoke(action: string, ...args: any): void {
-    addInvoke({ action, args })
+    addInvoke({ action, args });
   }
 
   off(action: string, callback?: (args: any[]) => void): void {
     if (callback) {
-      removeSubscriberByCallback(callback)
+      removeSubscriberByCallback(callback);
     } else {
       removeSubscriberByAction(action);
     }
