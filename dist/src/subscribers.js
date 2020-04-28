@@ -13,11 +13,8 @@ function clearSubscribers() {
     subscribers = [];
 }
 exports.clearSubscribers = clearSubscribers;
-function removeSubscriberByAction(action) {
-    subscribers = subscribers.filter(function (subscriber) { return subscriber.action !== action; });
+function removeSubscriber(action, callback) {
+    var filterByActionAndCallback = function (subscriber) { return (subscriber.action !== action && subscriber.callback !== callback); };
+    subscribers = subscribers.filter(filterByActionAndCallback);
 }
-exports.removeSubscriberByAction = removeSubscriberByAction;
-function removeSubscriberByCallback(callback) {
-    subscribers = subscribers.filter(function (subscriber) { return subscriber.callback !== callback; });
-}
-exports.removeSubscriberByCallback = removeSubscriberByCallback;
+exports.removeSubscriber = removeSubscriber;

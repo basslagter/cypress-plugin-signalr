@@ -16,12 +16,7 @@ var SignalRMock = /** @class */ (function () {
         invokes_1.addInvoke({ action: action, args: args });
     };
     SignalRMock.prototype.off = function (action, callback) {
-        if (callback) {
-            subscribers_1.removeSubscriberByCallback(callback);
-        }
-        else {
-            subscribers_1.removeSubscriberByAction(action);
-        }
+        subscribers_1.removeSubscriber(action, callback);
     };
     SignalRMock.prototype.onclose = function (callback) {
         return;

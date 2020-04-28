@@ -14,10 +14,9 @@ export function clearSubscribers(): void {
   subscribers = [];
 }
 
-export function removeSubscriberByAction(action: string): void {
-  subscribers = subscribers.filter(subscriber => subscriber.action !== action);
-}
-
-export function removeSubscriberByCallback(callback: (args: any[]) => void): void {
-  subscribers = subscribers.filter(subscriber => subscriber.callback !== callback);
+export function removeSubscriber(action: string, callback: (args: any[]) => void): void {
+  const filterByActionAndCallback = (subscriber: ISubscriber): boolean => (
+    subscriber.action !== action && subscriber.callback !== callback
+  );
+  subscribers = subscribers.filter(filterByActionAndCallback);
 }
