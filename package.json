@@ -29,10 +29,9 @@
   },
   "homepage": "https://github.com/basslagter/cypress-plugin-signalr#readme",
   "devDependencies": {
-    "@types/cypress": "^1.1.3",
-    "@types/node": "^13.11.0",
+    "@types/node": "^13.13.4",
+    "cypress": "^4.5.0",
     "standard-version": "^7.1.0",
-    "typescript": "^3.8.3",
-    "lodash": "^4.17.15"
+    "typescript": "^3.8.3"
   }
 }
