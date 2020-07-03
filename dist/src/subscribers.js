@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.removeSubscriber = exports.clearSubscribers = exports.addSubscriber = exports.getSubscribers = void 0;
 var subscribers = [];
 function getSubscribers() {
     return subscribers;

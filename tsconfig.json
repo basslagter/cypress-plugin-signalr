@@ -11,7 +11,8 @@
     "types": [
       "node",
       "cypress"
-    ]
+    ],
+    "lib": ["esnext", "dom"]
   },
   "exclude": [
     "node_modules",

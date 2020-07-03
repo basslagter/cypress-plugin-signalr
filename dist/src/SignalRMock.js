@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SignalRMock = void 0;
 var subscribers_1 = require("./subscribers");
 var invokes_1 = require("./invokes");
 var SignalRMock = /** @class */ (function () {
@@ -13,7 +14,10 @@ var SignalRMock = /** @class */ (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             args[_i - 1] = arguments[_i];
         }
-        invokes_1.addInvoke({ action: action, args: args });
+        return new Promise(function (resolve) {
+            invokes_1.addInvoke({ action: action, args: args });
+            resolve();
+        });
     };
     SignalRMock.prototype.off = function (action, callback) {
         subscribers_1.removeSubscriber(action, callback);
