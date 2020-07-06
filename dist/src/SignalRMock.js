@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SignalRMock = void 0;
 var subscribers_1 = require("./subscribers");
 var invokes_1 = require("./invokes");
 var SignalRMock = /** @class */ (function () {
