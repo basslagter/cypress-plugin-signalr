@@ -23,6 +23,7 @@
     "trigger"
   ],
   "author": "Bas Slagter",
+  "contributors": ["long.cui@miles.no"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/longcui/cypress-plugin-signalr/issues"
