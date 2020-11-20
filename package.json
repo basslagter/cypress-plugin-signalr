@@ -1,5 +1,5 @@
 {
-  "name": "@blueday/cypress-plugin-signalr",
+  "name": "@blueday-technology/cypress-plugin-signalr",
   "version": "0.0.2",
   "description": "Verify and publish actions from and to your SignalR hubs",
   "main": "dist/index.js",
