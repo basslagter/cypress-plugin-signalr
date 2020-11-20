@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/longcui/cypress-plugin-signalr/compare/v0.0.1...v0.0.2) (2020-11-20)
+
+
+### Bug Fixes
+
+* Changed name ([5cea0d6](https://github.com/longcui/cypress-plugin-signalr/commit/5cea0d69d13889042e9bd4010709e68fc2651ca3))
+
 ### [0.0.1](https://github.com/basslagter/cypress-plugin-signalr/compare/v1.3.4...v0.0.1) (2020-11-20)
 
 
