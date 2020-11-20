@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1](https://github.com/basslagter/cypress-plugin-signalr/compare/v1.3.4...v0.0.1) (2020-11-20)
+
+
+### Features
+
+* Add invocation reply ([9a01c7e](https://github.com/basslagter/cypress-plugin-signalr/commit/9a01c7e6c56b7226db7e935e69e5416315f11689))
+
 ### [1.3.4](https://github.com/basslagter/cypress-plugin-signalr/compare/v1.3.3...v1.3.4) (2020-07-06)
 
 ### Features
