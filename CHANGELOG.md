@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/longcui/cypress-plugin-signalr/compare/v0.0.3...v0.0.4) (2020-11-20)
+
+
+### Bug Fixes
+
+* Added github origin and contributor ([661464d](https://github.com/longcui/cypress-plugin-signalr/commit/661464d0e0ce22acd2ee1e9e6f17f9be8c6cde19))
+
+### [0.0.3](https://github.com/longcui/cypress-plugin-signalr/compare/v0.0.2...v0.0.3) (2020-11-20)
+
+
+### Bug Fixes
+
+* Changed name ([560335d](https://github.com/longcui/cypress-plugin-signalr/commit/560335d6cfaf43585172bb984b658f1f91634207))
+
+### [0.0.2](https://github.com/longcui/cypress-plugin-signalr/compare/v0.0.1...v0.0.2) (2020-11-20)
+
+
+### Bug Fixes
+
+* Changed name ([5cea0d6](https://github.com/longcui/cypress-plugin-signalr/commit/5cea0d69d13889042e9bd4010709e68fc2651ca3))
+
+### [0.0.1](https://github.com/basslagter/cypress-plugin-signalr/compare/v1.3.4...v0.0.1) (2020-11-20)
+
+
+### Features
+
+* Add invocation reply ([9a01c7e](https://github.com/basslagter/cypress-plugin-signalr/commit/9a01c7e6c56b7226db7e935e69e5416315f11689))
+
 ### [1.3.4](https://github.com/basslagter/cypress-plugin-signalr/compare/v1.3.3...v1.3.4) (2020-07-06)
 
 ### Features

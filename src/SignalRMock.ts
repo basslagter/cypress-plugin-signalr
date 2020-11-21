@@ -9,7 +9,7 @@ export class SignalRMock {
   invoke<T = any>(action: string, ...args: any) : Promise<T> {
     return new Promise<T>((resolve) => {
       addInvoke({ action, args });
-      resolve();
+      resolve(window.signalRInvocationResults && window.signalRInvocationResults[action]);
     });
   }
 

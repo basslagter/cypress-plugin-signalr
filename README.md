@@ -129,3 +129,24 @@ Optionally you can specify whether you want to clear both the invokes as the sub
          });
   });
 ```
+
+4. InvocationReply
+Pass variable `signalRInvocationResults` to `window`. The variable is in json form: 
+eg
+```json
+ {
+   "DeleteNotification": "here is the reply"
+ }
+```
+How to use in Cypress
+```javascript
+  cy.fixture("signalRInvocationResults/standard.json").then((jsonObj) => {
+    window.signalRInvocationResults = jsonObj;
+    cy.log(
+      "signalRInvocationResults saved to Cypress window global variable to be used by 'cypress-plugin-signalr'."
+    );
+    cy.visit(url, {
+      mockSignalR: true,
+    });
+  });
+```

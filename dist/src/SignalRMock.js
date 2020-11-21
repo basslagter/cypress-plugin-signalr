@@ -15,7 +15,7 @@ var SignalRMock = /** @class */ (function () {
         }
         return new Promise(function (resolve) {
             invokes_1.addInvoke({ action: action, args: args });
-            resolve();
+            resolve(window.signalRInvocationResults && window.signalRInvocationResults[action]);
         });
     };
     SignalRMock.prototype.off = function (action, callback) {
